@@ -18,7 +18,7 @@ public class MessagePushJob {
     @Autowired
     private MessagePushService messagePushService;
 
-    @XxlJob("messagePush")
+    @XxlJob("messagePushHandler")
     public void demoJobHandler() throws Exception {
         XxlJobHelper.log("短信推送开始......");
         messagePushService.messagePush();

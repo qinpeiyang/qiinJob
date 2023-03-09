@@ -1,39 +1,25 @@
 logging:
-    config: classpath:logback.xml
+  config: classpath:logback.xml
 server:
-    port: 9011
+  port: 9011
 
 spring:
-    datasource:
-        driver-class-name: com.mysql.cj.jdbc.Driver
-        hikari:
-            auto-commit: true
-            connection-test-query: SELECT 1
-            connection-timeout: 10000
-            idle-timeout: 30000
-            max-lifetime: 900000
-            maximum-pool-size: 30
-            minimum-idle: 10
-            pool-name: HikariCP
-            validation-timeout: 1000
-        password: qinpeiyang
-        type: com.zaxxer.hikari.HikariDataSource
-        url: jdbc:mysql://121.40.70.87:3306/xxl_job
-        username: qinpeiyang
+  profiles:
+    active: local
 
 xxl:
-    job:
-        accessToken: default_token
-        admin:
-            addresses: http://127.0.0.1:9001/qiin-job-admin
-        executor:
-            address: ''
-            appname: xxl-job-executor-sample
-            ip: ''
-            logpath: /data/applogs/xxl-job/jobhandler
-            logretentiondays: 30
-            port: 9999
+  job:
+    accessToken: default_token
+    admin:
+      addresses: http://127.0.0.1:9001/qiin-job-admin
+    executor:
+      address: ''
+      appname: xxl-job-executor-sample
+      ip: ''
+      logpath: /data/applogs/xxl-job/jobhandler
+      logretentiondays: 30
+      port: 9999
 
 mybatis:
-    mapperLocations: classpath:com.xxl.job/mapper/*.xml
-    typeAliasesPackage: com/xxl/job/domain
+  mapperLocations: classpath:com.xxl.job/mapper/*.xml
+  typeAliasesPackage: com/xxl/job/domain
