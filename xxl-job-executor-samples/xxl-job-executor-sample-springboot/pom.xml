@@ -6,7 +6,7 @@
     <parent>
         <groupId>com.xuxueli</groupId>
         <artifactId>xxl-job-executor-samples</artifactId>
-        <version>2.4.0-SNAPSHOT</version>
+        <version>2.4.0</version>
     </parent>
     <artifactId>xxl-job-executor-sample-springboot</artifactId>
     <packaging>jar</packaging>
@@ -53,19 +53,18 @@
     </dependencies>
 
     <build>
+        <finalName>${parent.artifactId}-${version}</finalName>
         <plugins>
-            <!-- spring-boot-maven-plugin (提供了直接运行项目的插件：如果是通过parent方式继承spring-boot-starter-parent则不用此插件) -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>${spring-boot.version}</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>repackage</goal>
-                        </goals>
-                    </execution>
-                </executions>
+            </plugin>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>com.pro-crafting.maven</groupId>
+                <artifactId>yaml-properties-maven-plugin</artifactId>
             </plugin>
         </plugins>
     </build>
