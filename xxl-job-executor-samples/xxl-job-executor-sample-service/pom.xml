@@ -8,7 +8,7 @@
         <artifactId>xxl-job-executor-samples</artifactId>
         <version>2.4.0</version>
     </parent>
-    <artifactId>xxl-job-executor-sample-springboot</artifactId>
+    <artifactId>xxl-job-executor-sample-service</artifactId>
     <packaging>jar</packaging>
 
     <name>${project.artifactId}</name>
@@ -49,6 +49,13 @@
             <artifactId>xxl-job-core</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
+        <!-- xxl-job-executor-sample-dao -->
+        <dependency>
+            <groupId>com.xuxueli</groupId>
+            <artifactId>xxl-job-executor-sample-dao</artifactId>
+            <version>2.4.0</version>
+            <scope>compile</scope>
+        </dependency>
 
         <!--lombok-->
         <dependency>
@@ -58,56 +65,53 @@
             <scope>provided</scope>
         </dependency>
 
-        <!-- SpringBoot集成mybatis框架 -->
+        <!--ftp连接工具-->
         <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>1.1.1</version>
-        </dependency>
-        <dependency>
-            <groupId>com.xuxueli</groupId>
-            <artifactId>xxl-job-executor-sample-dao</artifactId>
-            <version>2.4.0</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.xuxueli</groupId>
-            <artifactId>xxl-job-executor-sample-service</artifactId>
-            <version>2.4.0</version>
-            <scope>compile</scope>
+            <groupId>commons-net</groupId>
+            <artifactId>commons-net</artifactId>
+            <version>3.3</version>
         </dependency>
 
-        <!-- mybatis-starter：mybatis + mybatis-spring + hikari（default） -->
+        <!--第三方csv处理器-->
         <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>${mybatis-spring-boot-starter.version}</version>
+            <groupId>net.sourceforge.javacsv</groupId>
+            <artifactId>javacsv</artifactId>
+            <version>2.0</version>
         </dependency>
-        <!-- mysql -->
+
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>${mysql-connector-java.version}</version>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.83</version>
         </dependency>
+
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>1.7</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpcore</artifactId>
+            <version>4.4.13</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.11</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpmime</artifactId>
+            <version>4.5.11</version>
+        </dependency>
+
+
+
 
     </dependencies>
 
-    <build>
-        <finalName>${parent.artifactId}-${version}</finalName>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <artifactId>maven-assembly-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>com.pro-crafting.maven</groupId>
-                <artifactId>yaml-properties-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
 
 
 </project>

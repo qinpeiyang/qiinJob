@@ -8,7 +8,7 @@
         <artifactId>xxl-job-executor-samples</artifactId>
         <version>2.4.0</version>
     </parent>
-    <artifactId>xxl-job-executor-sample-springboot</artifactId>
+    <artifactId>xxl-job-executor-sample-dao</artifactId>
     <packaging>jar</packaging>
 
     <name>${project.artifactId}</name>
@@ -57,57 +57,12 @@
             <version>1.16.18</version>
             <scope>provided</scope>
         </dependency>
-
-        <!-- SpringBoot集成mybatis框架 -->
         <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>1.1.1</version>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>3.5.9</version>
         </dependency>
-        <dependency>
-            <groupId>com.xuxueli</groupId>
-            <artifactId>xxl-job-executor-sample-dao</artifactId>
-            <version>2.4.0</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.xuxueli</groupId>
-            <artifactId>xxl-job-executor-sample-service</artifactId>
-            <version>2.4.0</version>
-            <scope>compile</scope>
-        </dependency>
-
-        <!-- mybatis-starter：mybatis + mybatis-spring + hikari（default） -->
-        <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>${mybatis-spring-boot-starter.version}</version>
-        </dependency>
-        <!-- mysql -->
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>${mysql-connector-java.version}</version>
-        </dependency>
-
     </dependencies>
-
-    <build>
-        <finalName>${parent.artifactId}-${version}</finalName>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <artifactId>maven-assembly-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>com.pro-crafting.maven</groupId>
-                <artifactId>yaml-properties-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
 
 
 </project>

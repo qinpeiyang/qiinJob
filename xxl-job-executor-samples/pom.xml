@@ -13,6 +13,8 @@
     <modules>
         <module>xxl-job-executor-sample-frameless</module>
         <module>xxl-job-executor-sample-springboot</module>
+        <module>xxl-job-executor-sample-service</module>
+        <module>xxl-job-executor-sample-dao</module>
     </modules>
 
 </project>
