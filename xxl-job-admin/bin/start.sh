@@ -31,7 +31,7 @@ case $target in
         nohup java -jar $JAVA_OPTS ../boot/$projectName*.jar >> $LogFileName/start.$DATE.log 2>&1 &
     ;;
     prod)
-        JAVA_OPTS="-Xms4096m -Xmx4096m -Xss256k -Xmn256m -XX:MetaspaceSize=256m -XX:MaxMetaspaceSize=256m -XX:SurvivorRatio=8"
+        JAVA_OPTS="-Xms256m -Xms256m -Xss256k -Xmn128m -XX:MetaspaceSize=128m -XX:MaxMetaspaceSize=128m -XX:SurvivorRatio=8"
         JAVA_OPTS="$JAVA_OPTS -XX:+UseConcMarkSweepGC -XX:+PrintGCDetails -XX:+PrintGCDateStamps -Xloggc:$LogFileName/gc.log"
         JAVA_OPTS="$JAVA_OPTS -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=$LogFileName/dump"
         JAVA_OPTS="$JAVA_OPTS -Dspring.profiles.active=$target -Dspring.config.location=../conf/ -Dapollo_meta=$apollo_meta"
