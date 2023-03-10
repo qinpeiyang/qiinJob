@@ -15,3 +15,7 @@ spring:
     url: jdbc:mysql://192.168.208.3:3306/xxl_job
     username: qinpeiyang
     password: qinpeiyang
+  mail:
+    host: smtp.qq.com
+    username: 827989320@qq.com
+    password: rtxbqnmadfprbahh

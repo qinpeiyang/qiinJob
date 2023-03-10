@@ -10,5 +10,7 @@ public interface MessagePushService {
     //发送短信
     public void messagePush();
 
+    //发送邮件
+    public void mailPush();
 
 }

@@ -1,8 +1,3 @@
-logging:
-  config: classpath:logback.xml
-server:
-  port: 9011
-
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -20,20 +15,7 @@ spring:
     url: jdbc:mysql://121.40.70.87:3306/xxl_job
     username: qinpeiyang
     password: qinpeiyang
-
-xxl:
-  job:
-    accessToken: default_token
-    admin:
-      addresses: http://127.0.0.1:9001/qiin-job-admin
-    executor:
-      address: ''
-      appname: xxl-job-executor-sample
-      ip: ''
-      logpath: /data/applogs/xxl-job/jobhandler
-      logretentiondays: 30
-      port: 9999
-
-mybatis:
-  mapperLocations: classpath:com.xxl.job/mapper/*.xml
-  typeAliasesPackage: com/xxl/job/domain
+  mail:
+    host: smtp.qq.com
+    username: 827989320@qq.com
+    password: rtxbqnmadfprbahh

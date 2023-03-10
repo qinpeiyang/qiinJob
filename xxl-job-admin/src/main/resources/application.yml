@@ -5,7 +5,7 @@ server:
 
 spring:
   profiles:
-    active: local
+    active: prod
   freemarker:
     charset: UTF-8
     request-context-attribute: request
@@ -14,7 +14,7 @@ spring:
     suffix: .ftl
     templateLoaderPath: classpath:/templates/
   mail:
-    from: xxx@qq.com
+    from: 827989320@qq.com
     host: smtp.qq.com
     password: xxx
     port: 25
@@ -27,7 +27,7 @@ spring:
           starttls:
             enable: true
             required: true
-    username: xxx@qq.com
+    username: 827989320@qq.com
   mvc:
     servlet:
       load-on-startup: 0

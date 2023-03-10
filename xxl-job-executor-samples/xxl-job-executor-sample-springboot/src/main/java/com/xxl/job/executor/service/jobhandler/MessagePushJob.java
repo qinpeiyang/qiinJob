@@ -8,8 +8,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.util.concurrent.TimeUnit;
-
 @Component
 public class MessagePushJob {
 
@@ -19,10 +17,17 @@ public class MessagePushJob {
     private MessagePushService messagePushService;
 
     @XxlJob("messagePushHandler")
-    public void demoJobHandler() throws Exception {
+    public void messagePushHandler() throws Exception {
+        //参数：{"name":"","mobile":"","place":""}
         XxlJobHelper.log("短信推送开始......");
         messagePushService.messagePush();
+    }
 
+    @XxlJob("mailPushHandler")
+    public void mailPushHandler() throws Exception {
+        //参数：{"mailTo":"","title":"","content":""}
+        XxlJobHelper.log("邮件推送开始......");
+        messagePushService.mailPush();
     }
 
 }
