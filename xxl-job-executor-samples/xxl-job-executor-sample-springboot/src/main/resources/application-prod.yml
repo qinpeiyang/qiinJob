@@ -16,10 +16,10 @@ spring:
       minimum-idle: 10
       pool-name: HikariCP
       validation-timeout: 1000
-    password: qinpeiyang
     type: com.zaxxer.hikari.HikariDataSource
     url: jdbc:mysql://121.40.70.87:3306/xxl_job
     username: qinpeiyang
+    password: qinpeiyang
 
 xxl:
   job:
