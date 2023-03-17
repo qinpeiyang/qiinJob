@@ -12,7 +12,7 @@ spring:
       pool-name: HikariCP
       validation-timeout: 1000
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:mysql://192.168.208.3:3306/xxl_job
+    url: jdbc:mysql://192.168.217.3:3306/xxl_job
     username: qinpeiyang
     password: qinpeiyang
   mail:
