@@ -2,7 +2,7 @@
 <configuration debug="false" scan="true" scanPeriod="1 seconds">
 
     <contextName>logback</contextName>
-    <property name="log.path" value="/root/app/qiinJob/logs/job-executor/xxl-job-executor.log"/>
+    <property name="log.path" value="/data/app/qiinJob/logs/job-executor/xxl-job-executor.log"/>
 
     <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
